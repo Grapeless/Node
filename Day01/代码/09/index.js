@@ -16,13 +16,13 @@ server.on('request', (req, res) => {
     res.setHeader('Content-Type', 'application/json;charset=utf-8')
     console.log(req.url)
     if(req.url === '/api/province'){
-            fs.readFile(path.join(__dirname,'data/province.json'),(err, data)=>{
-                if(err) {
-                    console.log(err)
-                    return
-                }
-                res.end(data.toString())
-            })
+        fs.readFile(path.join(__dirname,'data/province.json'),(err, data)=>{
+            if(err) {
+                console.log(err)
+                return
+            }
+            res.end(data.toString())
+        })
     }else {
         res.end('404 Not Found')
     }

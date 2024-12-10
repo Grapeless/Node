@@ -9,19 +9,41 @@
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
+const qs = require('querystring')
+
 const server = http.createServer()
+
 server.on('request', (req, res) => {
-  // 省份列表接口
-  if (req.url === '/api/province') {
-    fs.readFile(path.join(__dirname, 'data/province.json'), (err, data) => {
-      res.setHeader('Content-Type', 'application/json;charset=utf-8')
-      res.end(data.toString())
-    })
-  } else {
-    res.setHeader('Content-Type', 'text/html;charset=utf-8')
-    res.end('你要访问的资源路径不存在')
-  }
+    res.setHeader('Content-Type', 'application/json;charset=utf-8')
+
+    if (req.url === '/api/province') {
+        fs.readFile('data/province.json', (err, data) => {
+            if (err) {
+                return err
+            } else {
+                res.end(data.toString())
+            }
+        })
+    } else if (req.url.startsWith('/api/city')) {
+
+        const queryParam = req.url.split('?')[1]
+        const queryParamObj = qs.parse(queryParam)
+        const pname = queryParamObj.pname
+
+        fs.readFile(path.join(__dirname, 'data/city.json'), (err, data) => {
+            if (err) {
+                return err
+            } else {
+                const dataObj = JSON.parse(data.toString())
+                const aimDataList = JSON.stringify(dataObj[pname])
+                res.end(aimDataList)
+            }
+        })
+    } else {
+        res.end('404 Not Found')
+    }
 })
+
 server.listen(3000, () => {
-  console.log('Web 服务启动了')
+    console.log('服务器已启动')
 })

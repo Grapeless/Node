@@ -1,0 +1,29 @@
+1.Node.js是什么,为什么能执行js,与浏览器宿主环境的区别
+
+2.fs模块
+    2.1 fs.writeFile('文件路径',data,err=> {})
+    2.2 fs.readFile('文件路径',(err,data)=>{})
+
+3.path模块
+    3.1 __dirname
+    3.2 path.join(...)
+
+4.http模块:创建web服务器步骤(1,2,3,4)
+    4.1 res.setHeader,res.end()
+    4.2 req.url
+
+5.querystring模块:qs.parse()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
