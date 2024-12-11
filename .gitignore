@@ -27,6 +27,7 @@
 *.mp3
 *.png
 *.gif
+node_modules/
 
 # Logs and databases #
 ######################

@@ -1,0 +1,4 @@
+npm config get registry  --查看当前下载源
+https://registry.npmjs.org/  --默认下载源
+npm config set registry [url]  --永久设置下载源
+

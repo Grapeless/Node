@@ -13,7 +13,7 @@ const path = require('path')
 const server = http.createServer()
 
 server.on('request', (req, res) => {
-    res.setHeader('Content-Type', 'text/html;charset-utf-8')
+    res.setHeader('Content-Type', 'text/html;charset=utf-8')
     if (req.url === '/index.html' || req.url === '/') {
         fs.readFile(path.join(__dirname,'dist/index.html'),(err, data)=>{
             if(err){
