@@ -1,0 +1,75 @@
+1.基础使用
+    1.建立src文件夹,webpack.config.js文件夹
+    2.npm i webpack webpack-cli  --save-dev(--D)
+    3.在package.json中添加自定义命令
+    4.使用 npm run 'DIY_CMD' 命令使用webpack打包
+
+2.默认入/出口
+    2.1 webpack的默认入口(src/index.js),出口(dist/main.js)
+    2.2 修改默认入/出口(entry,output)  --1,2
+
+3.自动生成html
+    3.1 下载插件 npm i html-webpack-plugin --save-dev
+    3.2 导入后配置plugins  --3
+
+4.打包css模块
+    4.1 在默认入口中导入.css(非标准js导入语法)
+    4.2 下载loader:npm i css-loader style-loader --save-dev
+    4.3 配置module.rule  --4
+
+5.打包less模块
+    4.1 在默认入口中导入.less(非标准js导入语法)
+    4.2 下载loader:npm i less less-loader --save-dev(也需要css的两个loader)
+    4.3 配置module.rule  --4
+
+6.打包图片
+    6.1 图片被添加至项目的两种方式(1.直接在.css中设置 2.使用js操作img的src属性等)
+    6.2 使用:配置module.rule  --4
+
+7.语法降级
+    7.1 下载babel-loader:npm i babel-loader @babel/core @babel/preset-env -D
+    7.2 配置module.rule  --4
+
+8.webpack开发服务器
+    8.1 下载 npm i webpack-dev-server --save-dev
+    8.2 在package.json中添加自定义命令并设置打包模式
+    8.3 使用 npm run 'DIY_CMD'使用其开启开发服务器
+
+9.打包模式
+    9.1 两种设置方式
+    9.1 两种打包模式
+
+10.配置source map以准确追踪error和warning在原始代码的位置:配置devtool  --5
+
+11.解析别名:配置resolve  --6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
