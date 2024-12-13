@@ -1,0 +1,9 @@
+{
+  "name": "cz_utils",
+  "version": "1.0.0",
+  "description": "10个名字",
+  "main": "index.js",
+  "author": "lim",
+  "license": "MIT"
+
+}

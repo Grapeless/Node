@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>随机点名</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <p></p>
+  <script>
+      axios({
+          url: 'http://localhost:3000/api/rand'
+      }).then(res => {
+          console.log(res)
+          document.querySelector('p').innerHTML = `${res.data}`
+      }).catch(e => {
+          console.log(e)
+      })
+  </script>
+</body>
+</html>
