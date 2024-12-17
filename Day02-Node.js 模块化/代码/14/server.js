@@ -6,9 +6,10 @@
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
-const server = express()
 
-server.get('/api/province', (req, res) => {
+const server = express()
+server.use(express.static('./public'))
+server.get('/index.html', (req, res) => {
   fs.readFile(path.join(__dirname, 'data/province.json'), (err, data) => {
     res.send(data.toString())
   })

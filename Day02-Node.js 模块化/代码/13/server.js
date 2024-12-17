@@ -9,8 +9,11 @@
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
+const cors = require('cors')
+
 const server = express()
 
+server.use(cors())
 server.get('/api/province', (req, res) => {
   fs.readFile(path.join(__dirname, 'data/province.json'), (err, data) => {
     res.send(data.toString())

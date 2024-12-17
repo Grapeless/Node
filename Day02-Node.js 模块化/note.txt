@@ -1,0 +1,29 @@
+1.模块化
+    1.1 CommonJS标准
+        导入: const v = require('')  (可以进行解构赋值)
+        导出: module.exports = {}
+    1.2 ECMA Module标准
+        1.2.1 默认导入导出
+            导出: export default {}
+            导入: import obj form ''  (只能在改步骤之后解构obj)
+        1.2.2 命名导入导出
+            导出: export 变量声明
+            导入: import {a1 as b1,a2} form '' (类似解构赋值，但是使用as进行重命名)
+
+2.包(是什么)(工具包,项目包)
+    2.1 自定义包:package.json,index.js的位置，配置项，作用
+
+3.npm
+    3.1 npm init -y
+    3.2 npm i packageName
+    3.3 nmp i packageName -g  --全局下载
+    3.4 npm i  --按照package.json下载全部包
+    3.5 npm uni packageName
+
+    nodemon
+
+4.express
+    4.1 使用:1.下载  2.导入  3.监听事件  4.创建服务器
+    4.2 优化方法: server.get/post(),server.send(),server.status(),server.use()
+
+5.同源策略(作用，限制对象)与跨域访问(解决方案:使用CORS设置服务器响应头)

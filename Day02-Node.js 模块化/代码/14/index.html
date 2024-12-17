@@ -7,18 +7,16 @@
   <title>前端-网页</title>
 </head>
 <body>
-  <h1>是的，我是public/index.html</h1>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    // 目标：请求本机 Web 服务提供的省份列表数据
-    axios({
-      url: 'http://localhost:3000/api/province',
-      // method: 'get'
-    }).then(res => {
-      console.log(res)
-    }).catch(err => {
-      console.log(err)
-    })
+      axios({
+          url: 'http://localhost:3000/index.html',
+          // method: 'get'
+      }).then(res => {
+          console.log(res)
+      }).catch(err => {
+          console.log(err)
+      })
   </script>
 </body>
 </html>
